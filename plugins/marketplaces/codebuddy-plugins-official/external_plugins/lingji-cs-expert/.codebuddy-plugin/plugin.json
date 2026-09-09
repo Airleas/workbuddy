@@ -1,0 +1,65 @@
+{
+  "name": "lingji-cs-expert",
+  "version": "1.0.0",
+  "description": "Lynse (灵光记) customer support specialist '小灵': fuzzy-matches a customer's raw wording against the official QA knowledge base and returns the standard reply with Q-ID citation. Fully self-contained — no external services.",
+  "description_en": "Lynse customer support expert 'Xiao Ling': offline fuzzy QA retrieval over the bundled 82-entry knowledge base, returns Q-ID cited standard replies. Zero external dependencies.",
+  "author": {
+    "name": "Hawk",
+    "email": "support@lynse.ai"
+  },
+  "repository": "https://github.com/Airleas/lingji-cs-expert",
+  "homepage": "https://lynse.ai",
+  "license": "MIT",
+  "keywords": [
+    "customer-support",
+    "qa-retrieval",
+    "lynse",
+    "lingguangji",
+    "faq"
+  ],
+
+  "agents": ["./agents/lingji-cs-expert.md"],
+  "skills": ["./skills/lingji-qa"],
+
+  "expertType": "agent",
+  "agentName": "lingji-cs-expert",
+
+  "displayName": {
+    "en": "Xiao Ling",
+    "zh": "小灵"
+  },
+  "profession": {
+    "en": "Lynse Customer Support Specialist",
+    "zh": "灵光记客服专家"
+  },
+  "displayDescription": {
+    "en": "Paste a customer's raw question and it fuzzy-matches the standard QA answer, citing the Q-ID. Never fabricates — honestly escalates to a human agent when uncovered.",
+    "zh": "贴入客户原话即模糊匹配标准答案，输出带 Q 编号的亲民话术；查不到如实说明并建议转人工，绝不编造。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "07-SalesCommerce",
+  "defaultInitPrompt": {
+    "zh": "客户的原话是：「我这卡片连不上手机，试了好几次都不行」帮我找标准答案",
+    "en": "The customer wrote: \"My card won't connect to my phone, I've tried several times.\" Find the standard answer."
+  },
+  "plugin": "lingji-cs-expert",
+  "tags": [
+    { "en": "Support Reply", "zh": "客服话术" },
+    { "en": "QA Retrieval", "zh": "QA 检索" },
+    { "en": "After-sales", "zh": "售后排查" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "客户的原话是：「我这卡片连不上手机，试了好几次都不行」帮我找标准答案",
+      "en": "The customer wrote: \"My card won't connect to my phone, I've tried several times.\" Find the standard answer."
+    },
+    {
+      "zh": "客户问能不能开发票，我要怎么回复他",
+      "en": "A customer asks how to get an invoice — how should I reply?"
+    },
+    {
+      "zh": "设备连接类问题都有哪些标准答案，帮我列一下",
+      "en": "List all standard answers about device connection issues."
+    }
+  ]
+}
